@@ -24,17 +24,11 @@ app.use("/api/products",productRoutes);
 app.use("/api/cart",cartRoutes);
 app.use("/api/orders",orderRoutes);
 
-//connect to mongodb
-mongoose.connect(process.env.MONGO_URI,{
-     useNewUrlParser:true,
-     useUnifiedTopology:true,
-})
- .then(()=>{
-     console.log("MongoDB Connected");
- })
- .catch((err)=>{
-     console.log("MongoDb Connection Error:",err);
- })
+// MongoDB Connection
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log("MongoDB Connected"))
+  .catch((err) => console.log("MongoDb Connection Error:", err));
+
 
  const PORT=process.env.PORT||5000
 
