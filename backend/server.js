@@ -12,7 +12,10 @@ app.use('/images', express.static(path.join(__dirname, 'images')));
 
 //middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: "https://quickkart-frontend.vercel.app", // your Vercel frontend URL
+  credentials: true,
+}));
 
 //Routes
 // ✅ Add this:
