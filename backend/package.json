@@ -4,9 +4,8 @@
   "description": "",
   "main": "server.js",
  "scripts": {
-  "start": "node server.js",      // ✅ Correct for production
-  "dev": "nodemon server.js"      // ✅ Use this locally during development
-}
+  "start": "node server.js",      
+  "dev": "nodemon server.js"      
 ,
   "keywords": [],
   "author": "",
