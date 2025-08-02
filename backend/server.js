@@ -15,6 +15,10 @@ app.use(express.json());
 app.use(cors());
 
 //Routes
+// ✅ Add this:
+app.get('/', (req, res) => {
+  res.send('API is running...');
+});
 const authRoutes=require("./routes/userRoutes");
 const productRoutes=require("./routes/productRoutes");
 const cartRoutes=require("./routes/cartRoutes");
