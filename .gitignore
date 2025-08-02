@@ -1,0 +1,19 @@
+# General
+node_modules/
+.env
+.DS_Store
+*.log
+
+# Ignore system/editor files
+.vscode/
+.idea/
+
+# Ignore frontend and backend node_modules and envs
+frontend/node_modules/
+frontend/.env
+
+backend/node_modules/
+backend/.env
+
+# Vite/React build output
+frontend/dist/
